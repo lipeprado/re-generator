@@ -1,0 +1,35 @@
+{
+  "name": "re-generator",
+  "version": "1.0.0",
+  "description": "A ReactJS components generator.",
+  "main": "regenerator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lipeprado/re-generator.git"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "redux",
+    "generator",
+    "tool",
+    "cli"
+  ],
+  "author": "Filipe Prado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lipeprado/re-generator/issues"
+  },
+  "homepage": "https://github.com/lipeprado/re-generator#readme",
+  "dependencies": {
+    "commander": "^2.15.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0"
+  }
+}
