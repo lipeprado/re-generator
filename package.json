@@ -2,9 +2,9 @@
   "name": "re-generator",
   "version": "1.0.0",
   "description": "A ReactJS components generator.",
-  "main": "regenerator.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/lipeprado/re-generator#readme",
   "dependencies": {
-    "commander": "^2.15.1"
+    "colors": "^1.2.5",
+    "commander": "^2.15.1",
+    "inquirer": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

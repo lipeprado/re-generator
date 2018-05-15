@@ -1,4 +1,4 @@
-const fullComponent = name => (
+const fullRedux = name => (
   `
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -37,5 +37,5 @@ const stateLess = name => (
         `
 );
 
-module.exports = { fullComponent, stateLess };
+module.exports = { fullRedux, stateLess };
 

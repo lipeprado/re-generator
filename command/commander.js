@@ -1,21 +1,27 @@
 
 const fs = require('fs');
 const path = require('path');
-const { fullComponent, stateLess } = require('./contents');
+const { fullRedux, stateLess } = require('../content/contents');
 
 const createDir = (dir) => {
-  const road = path.join(__dirname, dir);
-  if (fs.existsSync(road)) return null;
+  const road = path.join(__dirname, `../../${dir}`);
+  if (fs.existsSync(road)) return path.join(__dirname, dir);
   fs.mkdirSync(path.join(road));
   return road;
 };
 
+
 const content = (name, type) => {
-  if (type) {
-    const full = `${name}Container`;
-    return fullComponent(full);
+  switch (type) {
+    case 'stateLess':
+      stateLess(name);
+      break;
+    case 'allRedux':
+      fullRedux(name);
+      break;
+    default:
+      break;
   }
-  return stateLess(name);
 };
 
 const createComp = (road, comp, type) => {
@@ -25,6 +31,7 @@ const createComp = (road, comp, type) => {
     fs.writeFileSync(path.join(road, `${comp}.jsx`), content(comp, type));
   }
 };
+
 
 module.exports = { createDir, createComp };
 
