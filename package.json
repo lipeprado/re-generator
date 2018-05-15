@@ -1,5 +1,5 @@
 {
-  "name": "re-generator",
+  "name": "react-component-generator",
   "version": "1.0.0",
   "description": "A ReactJS components generator.",
   "main": "index.js",
@@ -19,6 +19,9 @@
     "cli"
   ],
   "author": "Filipe Prado",
+  "bin": {
+    "re-generator": "index.js"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lipeprado/re-generator/issues"
