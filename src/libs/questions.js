@@ -27,7 +27,7 @@ const questions = [
   },
 ];
 
-const inquired = () => inquirer
-  .prompt(questions)
+const inquired = () => inquirer.prompt(questions)
   .then(answers => answers);
+
 module.exports = inquired;

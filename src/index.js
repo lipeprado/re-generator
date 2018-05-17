@@ -10,11 +10,12 @@ program
   .command('create a component')
   .alias('c')
   .description('create new directory')
-  .action(async () => {
-    const answers = await questions();
-    const { directoryName, componentName, componentType } = answers;
-    const road = await createDir(directoryName);
-    createComp(road, componentName, componentType);
+  .action(() => {
+    questions().then((answers) => {
+      const { directoryName, componentName, componentType } = answers;
+      const road = createDir(directoryName);
+      createComp(road, componentName, componentType);
+    }).catch(err => console.log(err));
   });
 
 program.parse(process.argv);
