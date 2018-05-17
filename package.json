@@ -22,7 +22,7 @@
   ],
   "author": "Filipe Prado",
   "bin": {
-    "re-generator": "./node_modules/.bin/re-generator"
+    "re-generator": "../.bin/re-generator"
   },
   "license": "MIT",
   "bugs": {
