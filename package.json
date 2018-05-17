@@ -21,9 +21,6 @@
     "cli"
   ],
   "author": "Filipe Prado",
-  "bin": {
-    "re-generator": "../.bin/re-generator"
-  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lipeprado/re-generator/issues"
