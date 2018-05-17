@@ -14,17 +14,25 @@ const createDir = (dir) => {
   const componentsPathExist = fs.existsSync(componentsPath);
 
   // Create mainPath if doest exist
-  const mainPath = path.join(__dirname, `${componentsPath}/${dir}`);
+  const mainPath = path.join(__dirname, `${componentsPath}`);
+  const mainPathExist = fs.existsSync(mainPath);
 
-  if (!componentsPathExist) {
+  if (srcPathExist && componentsPathExist) {
+    console.log('SRC E COMPONENTS EXISTE');
     const road = `${componentsPath}/${dir}`;
     fs.mkdirSync(path.join(road));
-  } 
-  // else if (srcPathExist && !componentsPath) {
-  //   const road = `${componentsPath}/${dir}`;
-  //   fs.mkdirSync(path.join(road));
-  // }
-  return fs.mkdirSync(path.join(mainPath));
+  } else if (srcPathExist && !componentsPathExist) {
+    console.log('SÒ SRC EXISTE');
+    const road = `${componentsPath}/${dir}`;
+    fs.mkdirSync(path.join(road));
+  } else if (!componentsPathExist && !srcPathExist) {
+    console.log('ENTROU NO NENHUM DO DOIS');
+    fs.mkdirSync(`${srcPath}`);
+    fs.mkdirSync(`${srcPath}`);
+  } else {
+    console.log('NENHUM DELES');
+    fs.mkdirSync(path.join(mainPath));
+  }
 };
 
 
