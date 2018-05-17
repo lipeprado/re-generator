@@ -4,8 +4,8 @@ const path = require('path');
 const { fullRedux, stateLess } = require('../content/contents');
 
 const createDir = (dir) => {
-  const road = path.join(__dirname, `../../${dir}`);
-  if (fs.existsSync(road)) return path.join(__dirname, dir);
+  const road = path.join(__dirname, `../${dir}`);
+  if (fs.existsSync(road)) return road;
   fs.mkdirSync(path.join(road));
   return road;
 };
@@ -14,14 +14,12 @@ const createDir = (dir) => {
 const content = (name, type) => {
   switch (type) {
     case 'stateLess':
-      stateLess(name);
-      break;
-    case 'allRedux':
-      fullRedux(name);
-      break;
+      return stateLess(name);
+    case 'reduxAll':
+      return fullRedux(name);
     default:
-      break;
   }
+  return null;
 };
 
 const createComp = (road, comp, type) => {

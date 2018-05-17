@@ -1,10 +1,12 @@
 {
-  "name": "generate-reaction",
+  "name": "create-react-components",
   "version": "1.0.1",
   "description": "A ReactJS components generator.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "clear": "rimraf ./build",
+    "build": "./node_modules/.bin/babel src -d ./build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,7 @@
   ],
   "author": "Filipe Prado",
   "bin": {
-    "re-generator": "index.js"
+    "re-generator": "./src/index.js"
   },
   "license": "MIT",
   "bugs": {
@@ -33,6 +35,8 @@
     "inquirer": "^5.2.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0"
