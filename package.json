@@ -1,6 +1,6 @@
 {
   "name": "create-react-components",
-  "version": "0.0.4",
+  "version": "1.0.3",
   "description": "A ReactJS components generator.",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,9 @@
     "cli"
   ],
   "author": "Filipe Prado",
+  "bin": {
+    "re-generator": "./src/index.js"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lipeprado/re-generator/issues"
