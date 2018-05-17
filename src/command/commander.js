@@ -5,6 +5,9 @@ const { fullRedux, stateLess } = require('../content/contents');
 
 const createDir = (dir) => {
   const road = path.join(__dirname, `../../../${dir}`);
+  console.log('dir', __dirname);
+  console.log('road', road);
+  
   if (fs.existsSync(road)) return road;
   fs.mkdirSync(path.join(road));
   return road;
